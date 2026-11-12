@@ -1,0 +1,143 @@
+{
+  "input": {
+    "k": 2,
+    "l": 2,
+    "record_count": 5,
+    "attributes": [
+      "age",
+      "zip"
+    ]
+  },
+  "generalization": [
+    {
+      "attribute": "age",
+      "nodes": [
+        "old",
+        "young"
+      ]
+    },
+    {
+      "attribute": "zip",
+      "nodes": [
+        "z1",
+        "z2"
+      ]
+    }
+  ],
+  "objectives": {
+    "suppressed_records": 0,
+    "retained_information_loss": 5
+  },
+  "published": [
+    {
+      "id": "p1",
+      "quasi": {
+        "age": "young",
+        "zip": "z1"
+      },
+      "sensitive": "flu"
+    },
+    {
+      "id": "p2",
+      "quasi": {
+        "age": "young",
+        "zip": "z1"
+      },
+      "sensitive": "cold"
+    },
+    {
+      "id": "p3",
+      "quasi": {
+        "age": "old",
+        "zip": "z2"
+      },
+      "sensitive": "flu"
+    },
+    {
+      "id": "p4",
+      "quasi": {
+        "age": "old",
+        "zip": "z2"
+      },
+      "sensitive": "covid"
+    },
+    {
+      "id": "p5",
+      "quasi": {
+        "age": "old",
+        "zip": "z2"
+      },
+      "sensitive": "covid"
+    }
+  ],
+  "suppressed_ids": [],
+  "audit": {
+    "mapping": [
+      {
+        "id": "p1",
+        "status": "published",
+        "original_leaf": {
+          "age": "y1",
+          "zip": "z1"
+        },
+        "generalized": {
+          "age": "young",
+          "zip": "z1"
+        },
+        "information_loss": 1
+      },
+      {
+        "id": "p2",
+        "status": "published",
+        "original_leaf": {
+          "age": "y2",
+          "zip": "z1"
+        },
+        "generalized": {
+          "age": "young",
+          "zip": "z1"
+        },
+        "information_loss": 1
+      },
+      {
+        "id": "p3",
+        "status": "published",
+        "original_leaf": {
+          "age": "o1",
+          "zip": "z2"
+        },
+        "generalized": {
+          "age": "old",
+          "zip": "z2"
+        },
+        "information_loss": 1
+      },
+      {
+        "id": "p4",
+        "status": "published",
+        "original_leaf": {
+          "age": "o1",
+          "zip": "z2"
+        },
+        "generalized": {
+          "age": "old",
+          "zip": "z2"
+        },
+        "information_loss": 1
+      },
+      {
+        "id": "p5",
+        "status": "published",
+        "original_leaf": {
+          "age": "o2",
+          "zip": "z2"
+        },
+        "generalized": {
+          "age": "old",
+          "zip": "z2"
+        },
+        "information_loss": 1
+      }
+    ]
+  }
+}

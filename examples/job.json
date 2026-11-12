@@ -1,0 +1,23 @@
+{
+  "records": [
+    {"id": "p1", "quasi": {"age": "y1", "zip": "z1"}, "sensitive": "flu"},
+    {"id": "p2", "quasi": {"age": "y2", "zip": "z1"}, "sensitive": "cold"},
+    {"id": "p3", "quasi": {"age": "o1", "zip": "z2"}, "sensitive": "flu"},
+    {"id": "p4", "quasi": {"age": "o1", "zip": "z2"}, "sensitive": "covid"},
+    {"id": "p5", "quasi": {"age": "o2", "zip": "z2"}, "sensitive": "covid"}
+  ],
+  "hierarchies": [
+    {"attribute": "age", "root": "A", "nodes": [
+      {"id": "A", "parent": null},
+      {"id": "young", "parent": "A"}, {"id": "old", "parent": "A"},
+      {"id": "y1", "parent": "young"}, {"id": "y2", "parent": "young"},
+      {"id": "o1", "parent": "old"}, {"id": "o2", "parent": "old"}
+    ]},
+    {"attribute": "zip", "root": "Z", "nodes": [
+      {"id": "Z", "parent": null},
+      {"id": "z1", "parent": "Z"}, {"id": "z2", "parent": "Z"}
+    ]}
+  ],
+  "k": 2,
+  "l": 2
+}
